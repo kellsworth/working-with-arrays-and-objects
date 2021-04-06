@@ -51,7 +51,17 @@ var employees = [
 */
 
 //Code Here
-
+function employeeUpdater() {
+  employees.forEach((employee, index) => {
+    if (employee.firstName === 'Theo') {
+      employees.splice(index, 1)
+    }
+    if (employee.firstName === 'Lorie') {
+      employee.department = 'HR'
+    }
+  })
+  return employees
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -69,7 +79,26 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+function removeDuplicates() {
 
+  const copy = [...workplaceAccidents]
+  for (const i in copy) {
+    for (let j = i + 1; j < copy.length; j++) {
+      if (copy[i] === copy[j]) {
+        workplaceAccidents.splice(i, 1)
+      }
+    }
+  }
+  console.log(workplaceAccidents)
+  return workplaceAccidents
+}
+
+// function removeDuplicates() {
+//   const newArr = workplaceAccidents.filter((number, index) => {
+//     return workplaceAccidents.findIndex(number) === index
+//   })
+//   return newArr
+// }
 
 
 ////////// PROBLEM 3 //////////
@@ -81,7 +110,7 @@ var cat = {
     {
       name: 'Grumpy',
       activities: ['be grumpy', 'eat food']
-    }, 
+    },
     {
       name: 'Lazy Bones',
       activities: ['sleep', 'pre-sleep naps']
@@ -145,12 +174,12 @@ var myCar = {
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // Do not edit the code above.
 
 /*
   Above is an array of arrays. Use two for loops.
-    1. Write a function called 'looper'. 
+    1. Write a function called 'looper'.
     2. 'looper' should loop over the arrays.
     3.  If the number is odd, replace it with 'odd'.
         If the number is even, replace it with 'even'.

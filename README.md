@@ -55,7 +55,7 @@ let user = {
 let userName = user.name; // 'John'
 let userAge = user.age; // 33
 let userHairColor = user.appearance.hairColor; // 'Blonde'
-let userEyeColor = user.sppearance.eyeColor; // 'Hazel'
+let userEyeColor = user.appearance.eyeColor; // 'Hazel'
 
 // Or, using object destructuring
 
